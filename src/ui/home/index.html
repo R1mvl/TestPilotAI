@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestPilot AI</title>
+    <link rel="stylesheet" href="home/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="amadeus.png" alt="Amadeus Logo">
+        </div>
+        <div class="created-by">
+            <p>Created by Erwann Mevel</p>
+        </div>
+    </header>
+    <div class="header">
+        <div class="title">
+            <h1>TestPilot AI</h1>
+            <h2>Automatic creation of UI test</h2>
+        </div>
+        <div class="input-section">
+            <input type="text" placeholder="Put the root URL of your website here that you want test here"
+                id="website-url">
+
+            <div class="options">
+
+                <h2>Options</h2>
+                <input type="text" placeholder="Target URL here (optional)" id="target-url">
+
+                <div class="sliders">
+                    <div class="slider">
+                        <label for="repeats">Number of repeat</label>
+                        <input type="range" id="repeats" min="1" max="20" value="10">
+                        <span id="repeats-value">10</span>
+                    </div>
+                    <div class="slider">
+                        <label for="time-per-repeat">Time per repeat (in minute)</label>
+                        <input type="range" id="time-per-repeat" min="1" max="60" value="10">
+                        <span id="time-per-repeat-value">10</span>
+                    </div>
+                </div>
+                
+                <div class="option-input-container">
+
+                    <div class="login-options" id="login-options">
+                        <h3 id="login-option-title">Login option ?</h3>
+                        <button id="login-button" class="login-button">Add login option</button>
+                    </div>
+
+                    <div class="input-options" id="input-options">
+                        <h3 id="input-option-title">The AI will generate the input pattern with generated data, if you want to specify input patterns, place them here</h3>
+                        
+                        <button id="input-button" class="input-button">Add input option</button>
+                    </div>
+
+                </div>
+
+                <button id="run-button">Run</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="test-section">
+            <div class="test-in-queue">
+                <h2>Test in queue</h2>
+                <div id="queue-card">
+                </div>
+            </div>
+            <div class="test-in-progress">
+                <h2>Test in progress</h2>
+                <div id="test-card">
+                </div>
+            </div>
+            <div class="tests-complete">
+                <h2>Tests complete</h2>
+                <div id="complete-card">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="scripts.js"></script>
+    <script type="module" src="home/scripts.js"></script>
+</body>
+
+</html>
