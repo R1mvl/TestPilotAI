@@ -1,0 +1,10 @@
+flask
+matplotlib
+networkx
+asyncio
+gunicorn
+numpy
+requests
+selenium
+transformers
+torch --index-url https://download.pytorch.org/whl/cpu

@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  testpilotai:
+    build: .
+    ports:
+      - "3260:3260"
+    environment:
+      FLASK_ENV: production
